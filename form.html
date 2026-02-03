@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+   <h1>Registration Form</h1>
+   <p>Please fill out the following details.</p>
+   <form action="https://www.example.com" method="post">
+    <fieldset>
+        <label for="first-name">First Name: </label>
+        <input type="text" name="first-name" id="first-name" placeholder="Enter your first name" required>
+        <label for="last-name">Last Name: 
+        </label>
+        <input type="text" name="last-name" id="last-name" placeholder="Enter your last name" required>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" placeholder="Enter your email here" required>
+        <label for="password">Create new password: </label>
+        <input type="password" name="password" id="password" pattern="[1-z0-5]{8,}" placeholder="Create new password" required>
+    </fieldset>
+    <fieldset>
+        <legend>Account type (required): </legend>
+        
+        <label for="personal"><input class="inline" type="radio" name="account-type" id="personal" value="personal" checked>Personal</label>
+        
+        <label for="business"><input class="inline" type="radio" name="account-type" id="business" value="business">Business</label>
+    
+    </fieldset>
+    <fieldset>
+        <label for="photo">Upload a profile picture: </label>
+        <input type="file" name="photo" id="photo">
+        <label for="age">Enter your age: </label>
+        <input type="number" name="age" id="age" min="13" max="100">
+        <label for="how-did-you-find">How did you hear about us?</label>
+        <select name="how-did-you-find" id="how-did-you-find">
+            <option value="">(select one)</option>
+            <option value="1">Ads</option>
+            <option value="2">Social Media</option>
+            <option value="3">Websites</option>
+        </select>
+        <label for="bio">Write a short bio:</label>
+        <textarea name="bio" id="bio" rows="5" cols="40" placeholder="I love to code..."></textarea>
+    </fieldset>
+    <section>
+    <a href="https://www.example.com">Read terms & conditions</a>
+    
+    <label class="terms" for="terms-and-conditions"><input class="inline" type="checkbox" name="terms-and-conditions" id="terms-and-conditions">I agree to terms & conditions.</label>
+    <button type="submit">Submit</button>
+    </section>
+   </form>
+</body>
+</html>
